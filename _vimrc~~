@@ -59,9 +59,9 @@ else
 	colorscheme grb256
 endif
 
-"change the Pmenu color
-hi Pmenu guibg=#212121 guifg=#ffffff
-hi PmenuSel guibg=#ffffff guifg=#ff2d4d
+"Change auto complete bg
+hi Pmeun guibg=#212121
+
 "change font family
 set guifont =Source_Code_Pro:h10
 
@@ -83,14 +83,12 @@ map <silent> <C-F2> :if &guioptions =~# 'T'<Bar>
 
 "show the cursir position
 set ruler
-"show the status line
+"show the status lin
 set laststatus=2
 "highlight the recent row and line
 set cursorline
 set cursorcolumn
 
-"split to the right
-set splitright
 "show newine symbol
 set list
 set listchars=tab:▸\ ,eol:¬
@@ -121,9 +119,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_exclude_preview = 1
-let g:airline#extensions#whitespace#enabled = 1
-let g:airline_section_warning = '➦ %{strftime("%H:%M")}'
-"let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#whitespace#check(),0)} ➦ %{strftime("%H:%M")}'
+let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#whitespace#check(),0)} ➦ %{strftime("%H:%M")}'
 
 "setting emmet
 let g:user_emmet_leader_key = '<silent><M-q>'
@@ -134,12 +130,10 @@ nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 let g:ycm_auto_trigger = 1
 let g:ycm_complete_in_strings = 1
 let g:ycm_complete_in_comments = 1
-let g:ycm_min_num_of_chars_for_completion = 1
 
 
 "vertical split when  opening the :help
 autocmd Filetype help wincmd L
-autocmd Filetype Gstatus wincmd H
 "cancel find highlighr
 map <silent><M-f> :set nohlsearch<CR>
 
