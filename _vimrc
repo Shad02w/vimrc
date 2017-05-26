@@ -72,7 +72,8 @@ map <silent> <C-F2> :if &guioptions =~# 'T'<Bar>
 
 "show the cursir position
 set ruler
-"show the status lin 
+"show the status line
+
 set laststatus=2
 "highlight the recent row and line
 set cursorline
